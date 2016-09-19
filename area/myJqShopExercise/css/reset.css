@@ -1,0 +1,46 @@
+
+body,div,p,h1,h2,h3,h4,h5,h6,ul,dl,a,dl,dt,dd{
+    margin: 0;
+    padding: 0;
+
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    /*ie9以下需要清一下img边框*/
+    border: none;
+}
+.clearfix{
+    /*针对ie8，在ie11下仿真ie8 ::after无效，所以加此一条清除浮动overflow: hidden;*/
+    /*但是使用:after是可以的*/
+    zoom: 1;
+}
+.clearfix:after{
+
+    display: block;
+    content: '';
+    clear: both;
+
+}
+
+/*
+.clearfix{
+    zoom: 1;
+}
+.clearfix::after{
+
+    display: block;
+    content: '';
+    clear: both;
+
+}
+*/
+
+body{
+    font-family: 宋体;
+}

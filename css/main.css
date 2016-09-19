@@ -1,0 +1,260 @@
+body {
+    font: 12px 微软雅黑;
+}
+
+html, body, div, p, h1, h2, h3, h4, h5, h6, ul, li {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: none;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+#content {
+    background: url(../image/bg.jpg) 0 0 no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /*处理.title的margin-top引起的空白*/
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 720px;
+    
+}
+
+
+/*skills*/
+
+#skills {
+    text-align: center;
+}
+
+.skill_group span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg);
+    box-shadow:  0 0 8px #999;
+}
+
+.skill_group span p {
+    width: 100px;
+    transform: rotate(-45deg) translatex(-35px) translatey(20px);
+    color: white;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.hr {
+    width: 70%;
+    height: 2px;
+    background: #999;
+    margin: 20px auto;
+}
+
+
+/*projectList*/
+
+#projectList ul {
+    text-align: center;
+}
+
+.title {
+    margin: 40px auto;
+    width: 262px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    /*background: url(../image/title.png) no-repeat;*/
+    text-align: center;
+}
+
+.title span {
+    height: 86px;
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+    line-height: 86px;
+    text-shadow: 2px 2px 12px #0df;
+}
+
+#projectList li {
+    display: inline-block;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#projectList li .circle {
+    background: url(../image/circle.png) no-repeat;
+    background-size: cover;
+    width: 170px;
+    height: 170px;
+    margin-bottom: -170px;
+}
+
+.img_item {
+    width: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.img_item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.img_item .name {
+    font-size: 16px;
+    line-height: 28px;
+    color: white;
+    text-align: center;
+    margin-top: 18px;
+    text-shadow: 0 0 6px #999;
+}
+
+.img_item .shadow {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px #0df;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#projectList li:hover .circle {
+    animation: round 5s linear infinite;
+}
+
+@-webkit-keyframes round {
+    0% {
+        -webkit-transform: scale(1.1);
+    }
+    25% {
+        -webkit-transform: scale(1.1) rotate(30deg);
+    }
+    45% {
+        -webkit-transform: scale(1.1) rotate(-180deg);
+    }
+    65% {
+        -webkit-transform: scale(1.1) rotate(160deg);
+    }
+    85% {
+        -webkit-transform: scale(1.1) rotate(-180deg);
+    }
+    100% {
+        -webkit-transform: scale(1.1) rotate(50deg);
+    }
+}
+
+@keyframes round {
+    0% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(1.1) rotate(30deg);
+    }
+    45% {
+        transform: scale(1.1) rotate(-180deg);
+    }
+    65% {
+        transform: scale(1.1) rotate(160deg);
+    }
+    85% {
+        transform: scale(1.1) rotate(-180deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(50deg);
+    }
+}
+
+#projectList li:hover .img_item .shadow {
+    opacity: 1;
+}
+
+.popup {
+    /*此处给absolute只能当前页面有遮罩层*/
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.pop_top {
+    margin: 15% auto;
+    width: 524px;
+    background: url(../image/pop_bgtop.png) no-repeat center top;
+    padding-top: 48px;
+    position: relative;
+}
+
+.pop_bottom {
+    background: url(../image/pop_bgbottom.png) no-repeat center bottom;
+    padding-bottom: 28px;
+}
+
+.close {
+    position: absolute;
+    top: 24px;
+    right: 10px;
+    width: 14px;
+    height: 13px;
+    background: url(../image/close.png) no-repeat;
+}
+
+.pop_content {
+    border: 1px solid #00a9e0;
+    background: #1b1325;
+    font-size: 18px;
+    color: white;
+}
+
+.pop_content table {
+    margin: 10px;
+}
+
+.pop_content table tr {
+    margin-bottom: 10px;
+}
+
+.pop_name {
+    font-weight: bold;
+}
+
+.pop_content td:first-child {
+    width: 25%;
+}
+
+.pop_link a {
+    color: #00a9e0;
+    text-decoration: underline;
+}

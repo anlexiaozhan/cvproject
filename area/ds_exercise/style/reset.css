@@ -1,0 +1,36 @@
+﻿
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-size: 12px;
+}
+li{
+    list-style: none;
+}
+select,textarea,input{ outline: none;border:none;background:none;} /**/
+
+textarea{resize: none;} /**/
+a{text-decoration: none; color: #656565;}
+img{
+	border:none;
+}
+ .clearfix{
+    /*针对ie8，在ie11下仿真ie8 ::after无效，所以加此一条清除浮动overflow: hidden;*/
+    /*但是使用:after是可以的*/
+    zoom: 1;
+}
+.clearfix:after{
+
+    display: block;
+    content: '';
+    clear: both;
+
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}

@@ -1,0 +1,33 @@
+/* 折线图组件样式 */
+.h5_component_polyline{
+}
+.h5_component_polyline canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width:100%;/*宽度设置很重要，可以解决iphone两倍像素问题*/
+    height: 100%;
+}
+
+.h5_component_polyline .text{
+    position: absolute;
+    bottom: -20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    transform: 0.5;
+    -webkit-transition: all 1s  1.5s;
+    -moz-transition: all 1s  1.5s;
+    transition: all 1s  1.5s;
+
+    opacity: 0;
+}
+
+.h5_component_polyline_load .text{
+    opacity: 1;
+}
+
+.h5_component_polyline_leave .text{
+    opacity: 0;
+}

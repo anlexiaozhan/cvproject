@@ -1,0 +1,379 @@
+body{
+	overflow-x:hidden;
+}
+.comWidth{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*topBar*/
+.topBar{
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+}
+.collect{
+
+    font-weight: bold;
+    background: url(../images/icon/collection.jpg) left center no-repeat;
+    padding-left: 17px; 
+}
+
+/*logoBar*/
+.logoBar{
+    height: 85px;
+    background: #1d7ad9;
+}
+.logo{
+    width:150px;
+    padding-left: 39px;
+    padding-top: 13px;
+}
+.searchBox{
+    width: 430px;
+    /*padding: 23px  30px  27px 147px;*/
+    padding-left: 147px;
+    padding-top: 23px;
+}
+
+
+.searchBox_Text{
+    width:350px;
+    height: 35px;
+    padding: 0 5px;
+    background: #fff;
+    
+}
+
+.searchBox_Btn{
+    width:69px;
+    height: 35px;
+    background: #ff8c00;
+    font: 14px/35px "微软雅黑";
+    color:#fff;
+}
+
+.shopCar{
+    width:145px;
+    /*padding: 23px  59px  27px 0;*/
+    /*因为背景色在父元素，如果使用padding则padding部分也有会背景颜色覆盖*/
+    margin-left: 0;
+    margin-top: 23px;
+    margin-right: 59px;
+    background: #ff8c00;
+    font: 14px/35px "微软雅黑";
+    color:#fff;
+    
+}
+
+.shopCar_Text{
+    width:87px;
+    height: 35px;  
+    border-right: 1px solid  #e27a00;
+
+    background: url(../images/icon/shaoIcon.jpg) 11px 7px no-repeat;
+    text-indent: 40px;
+    /*text-indent: 也可以由padding的效果*/
+    text-align: center;
+}
+.shopCar_Num{
+    width:27px;
+    height: 35px;
+    border-right: 1px solid  #ff9c01;
+
+    background: url(../images/icon/sj.jpg) 33px center no-repeat;
+    padding-right: 29px;
+    text-align: right;
+}
+
+/*menuBar*/
+.menuBar{
+    height: 35px;
+    background: #1369c0;
+}
+
+.shopClass{
+    position: relative;
+}
+.shopClass h3{
+    width: 189px;
+    font: 16px/35px "微软雅黑";
+    text-align: center;
+    color: #FFF;
+    
+}
+.shopClass_Icon{
+    background: url(../images/icon/down.jpg) 0 center no-repeat;
+    margin-left: 11px;
+    width: 11px;
+    height: 7px;
+    display: inline-block;
+}
+
+.shopClass_Item{
+    position: absolute;
+    left: 0;
+    top: 35px;
+}
+.shopClass_Item dl{
+    
+    width: 165px;
+    height: 39px;
+    background: #4593fd;
+    border-top: 1px solid #5aa1fe;
+    border-bottom:1px solid #3487f2;
+    border-left: 1px solid #4593fd;
+
+    padding-left: 10px;
+    padding-right: 13px;
+    padding-top: 13px;
+    padding-bottom: 11px;
+    
+}
+
+.shopClass_Item dl.active{
+    background: #fff;
+}
+
+/*因为ie8不支持:not ，所以拆分为两段css处理
+.shopClass_Item dl.active a:not(.aLink){
+    color: black;
+}
+*/
+.shopClass_Item dl.active a {
+    color: black;
+}
+
+.shopClass_Item dl.active a.aLink {
+    color: white;
+}
+
+.shopClass_Item dt{
+    font:14px "微软雅黑";
+    line-height: 20px;
+
+    background: url(../images/icon/shop_sj.jpg) right center no-repeat;
+}
+
+.shopClass_Item dl.active dt {
+	background-image:none;
+}
+
+.shopClass_Item dd{
+
+
+    line-height: 18px;
+}
+
+.shopClass_Item a{
+    color: #ffffff;
+}
+
+.shopClass_Item a.aLink{
+    display: inline-block;
+    width: 48px;
+    height: 20px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 12px;
+    font-family: "新宋体";
+    background: url(../images/icon/aLink_bg.png) 0 0 no-repeat;
+
+}
+
+.nav li{
+    float: left;
+    padding-left: 33px;
+    padding-right: 24px;
+    font: 14px/35px "微软雅黑";
+    text-align: center;
+    
+    
+}
+.nav a{
+    color: #FFF;
+}
+.nav .active {
+    background: #4593fd;
+}
+
+/*************/
+/*banner*/
+.banner_Bar{
+    width: 811px;
+    height: 325px;
+    float: right;/**/ /*此处使用float:right*/
+    position: relative;
+}
+
+.banner_sm .banner_Bar{
+    width:190px;
+    height: 400px;
+}
+
+.imgBox{
+    width: 811px;
+    height: 325px;
+    overflow: hidden;    
+}
+
+.banner_sm .imgBox{
+    width:190px;
+    height: 400px;
+}
+
+.imgBox li{
+    width: 811px;
+    height: 325px;  
+}
+
+.banner_sm .imgBox li{
+    width:190px;
+    height: 400px;
+}
+
+
+.imgNum{
+    position: absolute;
+    bottom: 15px;
+    text-align: center; 
+    width: 100%;
+    /*此处text-align和bottom,width: 100%;结合*/ /*也可以使用left:center 未测试,没有left:center??*/
+}
+
+.banner_sm .imgNum{
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    width: initial;
+}
+
+.imgNum a{
+    display: inline-block;
+    width:20px;
+    height: 5px;
+    margin-right: 5px;
+    background: #fff;
+}
+
+.imgNum .active{
+    background: #ff7700;
+}
+
+/*splitBar*/
+.splitBar{
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    height: 44px;
+}
+
+.splitText{
+    text-indent: 15px;
+    font:24px/44px "微软雅黑";
+    text-align: center;
+}
+.splitMore{
+    vertical-align: bottom;
+    line-height: 44px;
+}
+.splitMore:hover{
+    text-decoration: underline;
+}
+
+/*shopList*/
+.shopList_right{
+    float: right;
+    
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 3px solid #ff7201;
+}
+.shopList_Top{
+
+}
+.shopList_TopItem{
+    float: left;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    width:199px;
+    height: 279px;
+    text-align: center;
+
+}
+/*最后一个宽度*/
+.shopList_TopItem:last-of-type{
+    width:209px;
+}
+.shopList_TopItem p{
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 24px;
+}
+.shopList_TopItem h3{
+    font-family: "微软雅黑";
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #ff7300;
+}
+.shopList_Bottom{
+
+
+}
+/*最后一个宽度*/
+.shopList_BottomItem:last-of-type{
+    width:209px;
+}
+.shopList_BottomItem{
+    float: left;
+    border-right: 1px solid #e5e5e5;
+    width:199px;
+    height: 116px;    
+}
+
+.shopList_BottomImg{
+    width:92px;
+    height: 92px;
+    float: left;
+}
+
+.shopList_BottomImg img{
+    width:92px;
+    height: 92px;
+}
+.shopList_BottomText{
+    width:100px;
+    height: 60px;
+    padding-top: 30px;
+    float: left;
+}
+
+.hr_40{
+    height: 40px;
+    width:100%;
+}
+/*footer*/
+
+.footer{
+    width:100%;
+    height: 223px;
+    padding-top:43px;
+    background: #d4d4d4;
+    text-align: center;
+}
+.footer p{
+    font: 12px/20px "新宋体";
+    text-align: center;
+}
+.footer a{
+    color: #000;
+}
+.footer a:hover{
+    color: #ff7201;
+}
+.webLogo{
+    margin-top: 28px;
+}
+.webLogo a{
+    margin-left: 26px;
+}

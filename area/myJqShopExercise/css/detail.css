@@ -1,0 +1,175 @@
+.product_item{
+    width: 312px;
+    float: left;
+    margin-right: 10px;
+
+}
+
+/*product_item 开始*/
+.zoomImg{
+    width: 310px;
+    height: 310px;
+    border: 1px solid #bbbbbb;
+}
+
+.viewBigPic{
+    padding: 10px 0;
+    height: 21px;
+    text-align: center;
+
+}
+.viewBigPic a{
+    /*?? 为什么使用 display: block*/
+    
+    
+}
+
+.imgList{
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.imgList li{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #eeeeee;
+    margin-right: 10px;
+    cursor: pointer;
+
+    display: none;
+}
+.imgList li img{
+    width: 60px;
+    height: 60px;
+}
+.imgList li:hover{
+    border: 1px solid #888;
+}
+.tab_menu li{
+    height: 20px;
+    padding: 0 6px;
+    margin-right: 4px;
+    float: left;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    background: #f1f1f1;
+    color: #000;
+    border: 1px solid #898989;
+    border-bottom-width: 0;
+    cursor: pointer;
+}
+
+.tab_menu li.selected{
+    background: #6d84b4;
+    color: #fff;
+}
+
+.tab_content div{
+    border: 1px solid #898989;
+    font: 12px/1.5 宋体;
+    display: none;
+}
+
+.tab_content div.selected{
+    display: block;
+}
+
+/*product_detail 开始*/
+
+.product_detail{
+    width: 444px;
+    float: left;
+}
+
+.product_detail h3{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.product_detail p{
+    font-size: 12px;
+    line-height: 25px;
+}
+
+.product_detail li{
+    font-size: 12px;
+    line-height: 25px;
+}
+
+#oldPrice{
+    text-decoration: line-through;
+}
+#nowPrice{
+    color: #ff5500;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.color_choose li{
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+    border: 1px solid #aaaaaa;
+    margin-right: 16px;
+    background: #eeeeee;
+    cursor: pointer;
+}
+.color_choose li.selected{
+    border: 1px solid #ff6600;
+}
+.color_choose img{
+    width: 30px;
+    height: 30px;    
+}
+.size_choose li{
+    float: left;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 6px;
+    border: 1px solid #aaaaaa;    
+    text-align: center;
+    cursor: pointer;
+}
+.size_choose li.selected{
+    background: #ff6600;
+}
+.product_rate{
+    font-size: 12px;
+    
+    margin-bottom: 20px;
+}
+.product_rate ul{
+    background: url(../images/star-matrix.gif) 0 0 no-repeat;
+}
+.product_rate li{
+    float: left;
+    width:16px;
+    height: 16px;
+}
+
+/*
+.product_rate ul li:hover{
+    z-index: 2;
+    
+    width: 80px;
+    height: 16px;
+}
+.product_rate ul li:nth-of-type(1):hover{
+    background: url(../images/star-matrix.gif) 0 -16px no-repeat;
+}
+
+.product_rate ul li:nth-of-type(2):hover{
+    background: url(../images/star-matrix.gif) 0 -32px no-repeat;
+}
+.product_rate ul li:nth-of-type(3):hover{
+    background: url(../images/star-matrix.gif) 0 -48px no-repeat;
+}
+*/
+.cart{
+    
+}
