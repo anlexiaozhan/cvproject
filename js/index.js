@@ -30,7 +30,7 @@ window.onload=function(){
         {
             name:'Jane Shop',
             links:['area/myJqShopExercise/index.html',
-                'myJqShopExercise/detail.html'
+                'area/myJqShopExercise/detail.html'
                 ],
             desc:'本项目采用jQuery实现网页换肤，居中广告轮播图，品牌活动鼠标移入效果，以及产品评分等功能。在结合jq插件基础上完成产品图片放大镜效果，显示产品大图，价格数量联动等。'
         },
