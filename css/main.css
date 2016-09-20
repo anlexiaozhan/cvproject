@@ -30,7 +30,7 @@ img {
 }
 
 #content {
-    background: url(../image/bg.jpg) 0 0 no-repeat;
+    background: url(../image/bg_compress.jpg) 0 0 no-repeat;
     background-attachment: fixed;
     background-size: cover;
     /*处理.title的margin-top引起的空白*/
