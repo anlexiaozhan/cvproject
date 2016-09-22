@@ -7,7 +7,7 @@
     <title>IT教育网2015课程学习情况</title>
 
     <!-- 载入所有的组件资源 -->
-    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
     
     <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
 
@@ -451,7 +451,9 @@
                         opacity:0
                     }       
                 })
-            .loader();
+            //.loader();
+			//加载首屏需要展示的img
+			.loader( [ 'imgs/face_bg.png','imgs/face_img_left.png','imgs/face_img_right.png','imgs/face_logo1.png','imgs/face_slogan.png','imgs/footer.png' ] );
             //.loader(5);
 
         });
