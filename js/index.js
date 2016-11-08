@@ -23,6 +23,16 @@ window.onload=function(){
     var popUp=document.getElementsByClassName('popup')[0];
     var data=[
         {
+            name:'音悦台',
+            links:['area/yinyuetai/index.html'],
+            desc:'移动端项目。本项目使用原生JS模拟了音悦台的移动站，使用原生的touch事件加translate模拟滚动条，构建轮播图，使用REM适配不同尺寸的屏幕。'
+        },	
+        {
+            name:'组件化轮播图',
+            links:['area/carousel/index.html'],
+            desc:'使用原生JS，以组件化形式编写了两种常见的轮播图形式，在兼容浏览器的情况下实现组件的复用。'
+        },		
+        {
             name:'微云',
             links:['area/weiyun_exercise/index.html'],
             desc:'本项目使用ES6模板进行树形列表、文件夹内容、路径导航区域数据渲染。使用原生JS实现全选单选、新建文件夹、拖拽选择功能。（html布局采用的miaov公开课版本）'
@@ -43,12 +53,12 @@ window.onload=function(){
             name:'淘宝移动端',
             links:['area/my_taobao_practice/index.html'],
             desc:'本项目依据不同设备的像素比devicePixelRatio动态调整rem，实现移动端布局。布局过程中，运用了flex，细节方面，使用图标字体iconfont，为了便于计算rem，借助了less。'
-        },
-        {
+        }/*,
+		{
             name:'电商首页',
             links:['area/ds_exercise/index.html'],
             desc:'本项目实现了一个基本的电商首页功能布局，包括搜索框，产品分类导航，分类产品列表。'
-        }
+        }*/
         
         
     ]

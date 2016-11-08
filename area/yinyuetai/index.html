@@ -1,0 +1,545 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>音悦台</title>
+        <script>
+            function setRem(){
+                var html=document.querySelector('html');
+                var width=html.getBoundingClientRect().width;
+                //以宽度的十分之一作为rem，一般常用的还有十六分之一
+                html.style.fontSize=width/10+'px';
+            }
+
+            window.addEventListener('resize',setRem);
+            window.addEventListener('orientationchange',setRem);
+            setRem();
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body>
+        <header id='header'>
+            <div class="title">
+                <div id="logo_box">
+                    <a href="javascript:void(0);" id="logo"></a>
+                </div>
+                <div id="menuBtn">
+                </div>
+                <div class="groupBtn">
+                    <a href="javascript:void(0);">登陆</a>
+                    <a href="javascript:void(0);">注册</a>
+                </div>                
+                <div id="searchShowBtn">
+                    <a href="javascript:void(0);">搜素</a>
+                </div>
+
+
+            </div>
+
+            <form id='searchForm' action="" class="search">
+                <input type="text" placeholder="请输入搜索内容" autocomplete="false">
+                <input type="button" value="搜索">
+            </form>
+
+            <div id="navMenu">
+                <ul class="clearfix">
+                    <li><a href="http://www.yinyuetai.com" target="_blank">首页</a></li>
+                    <li><a href="/mv">MV</a></li>
+                    <li><a href="/pl">悦单</a></li>
+                    <li><a href="/vchart">V榜</a></li>
+                    <li><a href="/stage">音悦stage</a></li>
+                    <li><a href="http://shop.m.yinyuetai.com">商城</a></li>
+                    <li><a href="/program">节目</a></li>
+                    <li><a href="/wapfan">饭团</a></li>
+                    <li><a href="http://news.yinyuetai.com/" target="_blank">资讯</a></li>
+                    <li><a href="http://i.yinyuetai.com" target="_blank">我的家</a></li>
+                    <li><a href="http://m.yinyuetai.com/apps/mobile" target="_blank">APP下载</a></li>
+                    <li><a href="http://m.yinyuetai.com/apps" target="_blank">热门应用</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="content_wrap">
+
+            <div id="content">
+                <!--nav-->
+                <div id="navScroll_wrap">
+                    <ul id="navScroll" class="clearfix">
+                        <li class="selected">
+                            <a href="javascript:void(0);"  data-tab="index">首页</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="mv">MV</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="pl">悦单</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="vchart">V榜</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">商城</a>
+                        </li>
+                        <li><a href="javascript:void(0);">众筹</a></li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="wapfan">饭团</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="program">节目</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="stage">音悦stage</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="apps/mobile">APP下载</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">资讯</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" target="_blank">我的家</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" data-tab="apps">热门应用</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--轮播图-->
+                <div id="swipe_wrap" >
+                    <ul class="swipe_list clearfix">
+                        <li>
+                            <a href="">
+                                <img src="img/swipe1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe2.jpg" alt="">
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="">
+                                <img src="img/swipe3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe5.jpg" alt="">
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="">
+                                <img src="img/swipe1.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe2.jpg" alt="">
+                            </a>
+                        </li>                    
+                        <li>
+                            <a href="">
+                                <img src="img/swipe3.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe4.jpg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/swipe5.jpg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="swipe_indicator">
+                        <li class="selected"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <!--MV首播-->
+                <div id='section_mvshoubo' class="content_innerbox">
+                    <div class="content_title">
+                        MV首播
+                        <div class="content_title_more">
+                            <a href="javascript:void(0);">更多></a>
+                        </div>
+                    </div>
+                    <div class="content_tab">
+                        <ul class="clearfix">
+                            <li class="selected">全部</li>
+                            <li>内地</li>
+                            <li>港台</li>
+                            <li>欧美</li>
+                            <li>韩国</li>
+                            <li>日本</li>
+                        </ul>
+                    </div>
+
+                    <div class="content_listWrap">
+                        <div class="content_list">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item2.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item3.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item4.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>                                                
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>                        
+
+                            
+                        </div>                        
+                    </div>
+                    <div class="content_loading"></div>
+                </div>
+
+                <!--粉丝聚焦-->
+                <div id='section_fsjujiao' class="content_innerbox">
+                    <div class="content_title content_title_sm">
+                        粉丝聚焦
+                    </div>
+
+                    <div class="content_listWrap">
+                        <div class="content_list">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item2.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item3.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item4.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>                                                
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>                        
+
+                            
+                        </div>                        
+                    </div>
+                </div>
+
+                <!--猜你喜欢-->
+                <div id='section_cnxihuan' class="content_innerbox">
+                    <div class="content_title content_title_sm">
+                        猜你喜欢
+                    </div>
+
+                    <div class="content_listWrap">
+                        <div class="content_list">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item2.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item3.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item4.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>                                                
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/list_item1.jpg" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            岁月轻狂 官方版
+                                        </p>
+                                        <div class="info">
+                                            <i></i>
+                                            <span>3.3万</span>
+                                            <i></i>
+                                            <span>29</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>                        
+
+                            
+                        </div>                        
+                    </div>
+                </div>
+
+                <!--热门应用-->
+                <div id='section_rmyingyong' class="content_innerbox">
+                    <div class="content_title content_title_sm">
+                        热门应用
+                    </div>
+
+                    <div class="content_listWrap">
+                        <div class="content_list">
+                            <ul class="clearfix">
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/app1.png" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            唯伊书坊
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/app2.png" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            土巴兔
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="item">
+                                        <div class="img">
+                                            <img src="img/app3.png" alt="list_item1">
+                                        </div>
+                                        <p class="title">
+                                            二手车
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>                        
+
+                            
+                        </div>                        
+                    </div>
+                </div>
+
+                <footer id="footer">
+                    Copyright © 2016 yinyuetai.com
+                </footer>
+            </div>
+            <!--滚动条-->
+            <div id="scrollBar">
+            </div>
+        </div>
+
+
+    </body>
+</html>

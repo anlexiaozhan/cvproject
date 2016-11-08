@@ -1,0 +1,405 @@
+/*1080/10 以宽度的十分之一作为rem，一般常用的还有十六分之一 */
+html,
+body,
+div,
+p,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section,
+header,
+footer,
+input,
+form {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+a,
+button,
+input {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+img,
+input {
+  border: none;
+  outline: none;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #626262;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #626262;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #626262;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #626262;
+}
+* {
+  box-sizing: border-box;
+}
+/************/
+html,
+body {
+  height: 100%;
+  /*不要忘记高度设置100%*/
+  overflow: hidden;
+}
+body {
+  font-family: Tahoma, "微软雅黑", "Microsoft Yahei", Helvetica, Arial, "宋体", sans-serif;
+}
+#header {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.8);
+}
+#header .title {
+  width: 100%;
+  height: 1.25rem;
+}
+#header .search {
+  height: 1.25rem;
+}
+#logo_box {
+  float: left;
+  width: 2.40740741rem;
+  height: 1.25rem;
+  padding-left: 0.15740741rem;
+  padding-top: 0.31481481rem;
+}
+#logo {
+  display: block;
+  width: 1.88888889rem;
+  height: 0.61111111rem;
+  background: url(../img/logo.png) no-repeat;
+  background-size: 1.88888889rem 0.61111111rem;
+}
+#menuBtn {
+  float: left;
+  width: 0.75rem;
+  height: 1.11111111rem;
+  margin-top: 0.12962963rem;
+  background: url(../img/menuBtn.png) no-repeat 0 0;
+  /*120*2=240 */
+  background-size: 0.75rem 2.22222222rem;
+}
+#menuBtn.show {
+  background: url(../img/menuBtn.png) no-repeat 0 -1.11111111rem;
+  background-size: 0.75rem 2.22222222rem;
+}
+#searchShowBtn,
+.groupBtn {
+  float: right;
+  font-size: 0;
+  margin-top: 0.18518519rem;
+}
+#searchShowBtn a {
+  display: inline-block;
+  height: 0.75rem;
+  line-height: 0.75rem;
+  padding: 0 0.24074074rem;
+  background: #669900;
+  border-radius: 0.09259259rem;
+  font-size: 0.35185185rem;
+  color: #ffffff;
+  margin-right: 0.25925926rem;
+}
+.groupBtn a {
+  display: inline-block;
+  border-radius: 0.03703704rem;
+  height: 0.71296296rem;
+  line-height: 0.71296296rem;
+  padding: 0 0.13888889rem;
+  background: #669900;
+  margin-right: 0.12962963rem;
+  font-size: 0.35185185rem;
+  color: #cccccc;
+}
+/*滚动条会加在content所以需要 绝对定位
+   因为滚动条计算原因： 距离上方位置使用padding 不能使用margin
+*/
+#content_wrap {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#content {
+  padding-top: 2.5rem;
+}
+#scrollBar {
+  width: 0.07407407rem;
+  height: 10%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  right: 0;
+}
+/*滚动Nav开始*/
+#navScroll_wrap {
+  background-color: #eeeeee;
+  width: 10rem;
+  height: 1.62037037rem;
+  padding-top: 0.28703704rem;
+  padding-bottom: 0.12962963rem;
+  border-bottom: 2px solid #cccccc;
+  overflow: hidden;
+}
+#navScroll_wrap li {
+  /*
+    如使用float，需计算#navs的宽度
+    负责设置display inline-block的同时在其父级white-space: nowrap;
+    */
+  float: left;
+}
+#navScroll_wrap li a {
+  display: block;
+  height: 1.18518519rem;
+  line-height: 1.18518519rem;
+  font-size: 0.59259259rem;
+  padding: 0 0.34259259rem;
+  color: #000000;
+  text-align: center;
+}
+#navScroll_wrap li.selected {
+  background: #669900;
+}
+#navScroll_wrap li.selected a {
+  color: #fff;
+}
+.search {
+  padding: 0.15740741rem;
+  /*否则form和input之间有间隔 空格??*/
+  font-size: 0;
+}
+.search input[type='text'] {
+  background: #999999;
+  color: #626262;
+  width: 7.65740741rem;
+  height: 0.93518519rem;
+  line-height: 0.93518519rem;
+  font-size: 0.38888889rem;
+  border-top-left-radius: 0.11111111rem;
+  border-bottom-left-radius: 0.11111111rem;
+  padding: 0 0.18518519rem;
+}
+.search input[type='button'] {
+  /*如果不float 和前面的text不是同一高度 ??*/
+  float: right;
+  background: #414040;
+  color: #ffffff;
+  width: 1.87037037rem;
+  height: 0.93518519rem;
+  line-height: 0.93518519rem;
+  font-size: 0.48148148rem;
+  border-top-right-radius: 0.11111111rem;
+  border-bottom-right-radius: 0.11111111rem;
+  text-align: center;
+}
+#navMenu {
+  background: rgba(0, 0, 0, 0.8);
+  padding-top: 0.32407407rem;
+  padding-bottom: 0.30555556rem;
+  border-top: 2px #666666 solid;
+  position: absolute;
+  top: 1.25rem;
+  display: none;
+}
+#navMenu li {
+  float: left;
+  width: 2.25925926rem;
+}
+#navMenu li a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-size: 0.48148148rem;
+  line-height: 1.25rem;
+}
+/*内容区域*/
+.content_innerbox {
+  padding: 0 0.15740741rem 0.31481481rem;
+  background: #eeeeee;
+  /*width: 10rem;*/
+}
+#swipe_wrap {
+  width: 10rem;
+  height: 5.75rem;
+  position: relative;
+  overflow: hidden;
+  /*
+    如果绝对定位元素 父级没有高度 
+    会导致布局失效??*/
+}
+#swipe_wrap ul.swipe_list {
+  /*5*2 10张图*/
+  width: 100rem;
+  position: absolute;
+}
+#swipe_wrap ul.swipe_list li {
+  width: 10rem;
+  float: left;
+  font-size: 0;
+}
+#swipe_wrap ul.swipe_list img {
+  height: 5.75rem;
+  width: 100%;
+}
+#swipe_wrap ul.swipe_indicator {
+  position: absolute;
+  bottom: 0.14814815rem;
+  right: 0.92592593rem;
+}
+#swipe_wrap ul.swipe_indicator li {
+  float: left;
+  background: #828184;
+  width: 0.16666667rem;
+  height: 0.16666667rem;
+  margin-left: 0.2962963rem;
+  border-radius: 50%;
+}
+#swipe_wrap ul.swipe_indicator li.selected {
+  background: #88af0e;
+}
+.content_title {
+  padding-left: 0.12962963rem;
+  line-height: 1.07407407rem;
+  background: #ffffff;
+  font-size: 0.51851852rem;
+}
+.content_title_sm {
+  line-height: 0.90740741rem;
+}
+.content_title_more {
+  float: right;
+  margin-right: 0.16666667rem;
+}
+.content_title_more a {
+  font-size: 0.38888889rem;
+  display: block;
+  color: #333333;
+}
+.content_tab {
+  background: #ffffff;
+}
+.content_tab li {
+  float: left;
+  height: 0.73148148rem;
+  line-height: 0.73148148rem;
+  padding: 0 0.12037037rem;
+  font-size: 0.44444444rem;
+  color: #666666;
+}
+.content_tab li.selected {
+  border-bottom: 3px solid #669900;
+}
+.content_list {
+  background: #fff;
+  padding-bottom: 0.15740741rem;
+}
+.content_list li {
+  float: left;
+  padding: 0.07407407rem;
+  background: #fff;
+  /*width: 523/@rem;
+    height: 455/@rem;*/
+}
+.content_list li > div {
+  /*width: 507/@rem;
+    height: 439/@rem;*/
+  padding: 0.0462963rem 0.05555556rem;
+  background: #eeeeee;
+}
+.content_list .img {
+  width: 4.58333333rem;
+  height: 2.62962963rem;
+  background: #eeeeee;
+}
+.content_list .img img {
+  width: 100%;
+  height: 100%;
+}
+.content_list .title {
+  height: 0.62037037rem;
+  line-height: 0.62037037rem;
+  font-size: 0.37037037rem;
+  padding-left: 0.13888889rem;
+}
+.content_list .info {
+  height: 0.67592593rem;
+  line-height: 0.67592593rem;
+  padding-left: 0.13888889rem;
+  font-size: 0;
+}
+.content_list .info i {
+  width: 0.60185185rem;
+  height: 0.53703704rem;
+  text-align: center;
+  display: inline-block;
+}
+.content_list .info i:nth-of-type(1) {
+  background: url(../img/mobile_index_ice.png) 0 0.1rem no-repeat;
+  background-size: cover;
+}
+.content_list .info i:nth-of-type(2) {
+  background: url(../img/mobile_index_ice.png) 0.1rem -0.45rem no-repeat;
+  background-size: cover;
+}
+.content_list .info span {
+  font-size: 0.35185185rem;
+  color: #333333;
+  vertical-align: top;
+}
+.content_loading {
+  width: 100%;
+  height: 2rem;
+  background: url(../img/load24.gif) center center no-repeat;
+  background-size: 0.44444444rem 0.44444444rem;
+  display: none;
+}
+.hr_34 {
+  height: 0.31481481rem;
+  background: #eeeeee;
+}
+/*热门应用*/
+#section_rmyingyong .item {
+  padding: 0.05555556rem 0.0462963rem 0;
+}
+#section_rmyingyong .item .img {
+  width: 2.94444444rem;
+  height: 2.80555556rem;
+}
+#section_rmyingyong .item p {
+  line-height: 0.55555556rem;
+}
+#footer {
+  width: 100%;
+  height: 1.81481481rem;
+  font-size: 0.37037037rem;
+  color: #666666;
+  text-align: center;
+  line-height: 1.81481481rem;
+}
