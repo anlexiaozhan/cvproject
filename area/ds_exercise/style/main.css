@@ -42,7 +42,8 @@ body{
     height: 35px;
     padding: 0 5px;
     background: #fff;
-    
+	/* ie6 input文字 居中问题*/
+	line-height:35px\9;    
 }
 
 .searchBox_Btn{
@@ -54,8 +55,8 @@ body{
 }
 
 .shopCar{
-    width:145px;
-    /*padding: 23px  59px  27px 0;*/
+    /*width:145px;
+    padding: 23px  59px  27px 0;*/
     /*因为背景色在父元素，如果使用padding则padding部分也有会背景颜色覆盖*/
     margin-left: 0;
     margin-top: 23px;
@@ -63,7 +64,8 @@ body{
     background: #ff8c00;
     font: 14px/35px "微软雅黑";
     color:#fff;
-    
+	/* ie6 双边距bug*/
+	display: inline;    
 }
 
 .shopCar_Text{
@@ -200,7 +202,7 @@ body{
 /*************/
 /*banner*/
 .banner_Bar{
-    width: 811px;
+    width: 810px;
     height: 325px;
     float: right;/**/ /*此处使用float:right*/
     position: relative;
@@ -209,10 +211,12 @@ body{
 .banner_sm .banner_Bar{
     width:190px;
     height: 400px;
+    /*@*/
+    float: none;
 }
 
 .imgBox{
-    width: 811px;
+    width: 100%;
     height: 325px;
     overflow: hidden;    
 }
@@ -223,7 +227,7 @@ body{
 }
 
 .imgBox li{
-    width: 811px;
+    width: 810px;
     height: 325px;  
 }
 
@@ -254,6 +258,10 @@ body{
     height: 5px;
     margin-right: 5px;
     background: #fff;
+    /* ie6小高度 */
+	font-size:0;
+	line-height:0;
+	overflow:hidden;
 }
 
 .imgNum .active{
@@ -300,10 +308,13 @@ body{
     text-align: center;
 
 }
-/*最后一个宽度*/
-.shopList_TopItem:last-of-type{
+html .lastItem{
     width:209px;
 }
+/*最后一个宽度 ie6-8不支持
+.shopList_TopItem:last-of-type{
+    width:209px;
+}*/
 .shopList_TopItem p{
     font-family: "微软雅黑";
     font-size: 16px;
@@ -376,4 +387,224 @@ body{
 }
 .webLogo a{
     margin-left: 26px;
+}
+
+
+/*产品分类页开始*/
+
+.categoryContent .leftArea{
+    width: 183px;
+    float: left;
+    background: #F3F3F3;
+    border: 1px solid #CDCDCD;
+}
+.categoryContent .leftArea h3{
+    font: bold 12px "宋体";
+    line-height: 34px;
+    text-align: center;
+    border-bottom:  1px solid #CDCDCD;
+
+}
+.categoryContent .leftArea dl{
+    padding: 3px 19px 5px;
+    
+    border-bottom:  1px dotted #CDCDCD;
+    /*提升父级border*/
+    margin-bottom: -1px;
+}
+.categoryContent .leftArea dt{
+    font: bold 12px "宋体";
+    line-height: 28px;
+}
+
+.categoryContent .leftArea dd{
+
+}
+
+.categoryContent .leftArea a{
+    font-size: 12px;
+    float: left;
+    /*ie6 百分比bug*/
+    width: 49.9%;
+    height: 24px;
+    line-height: 24px;
+}
+
+.hr_17{
+    height: 17px;
+    width:100%;
+}
+
+.categoryContent .rightArea{
+    width: 810px;
+    float: right;
+}
+
+.catTitle{
+    margin-top: 7px;
+    border-bottom: 2px solid #CCCCCC;
+}
+.catTitle .name{
+    display: inline-block;
+    width: 179px;
+    line-height: 34px;
+    border-bottom: 2px solid #096DBA;
+    font-size: 16px;
+    font-weight: bold;
+    /*提升父元素border*/
+    margin-bottom: -2px;
+}
+
+.catProductList {
+
+}
+
+.product_item {
+    float: left;
+    width: 24.9%;
+}
+
+.product_item .aImg{
+    
+    width: inherit;
+    /*此处为了图片能居中，宽度不能写100%*/
+    height: 172px;
+    display: table-cell;
+    vertical-align:middle; 
+    text-align: center;    
+
+    /* 针对IE的Hack */
+    *display: block;
+    *font-size: 150px;/*约为高度的0.873，172*0.873 约为150*/
+    *font-family:Arial;/*防止非utf-8引起的hack失效问题，如gbk编码*/
+    width:inherit;
+    height:172px;
+
+}
+
+.product_item img{
+
+}
+.product_item .name{
+    line-height: 19px;
+    height: 38px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+.product_item .price{
+    line-height: 26px;
+    font-size: 12px;
+    color: #D4105A;
+    text-indent: 15px;
+}
+.product_item .comment{
+    font-size: 12px;
+    margin-bottom: 25px;
+    text-indent: 15px;
+}
+
+.product_item .comment span{
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    background: url(../images/icon/xing.gif) 0 0 no-repeat;
+}
+
+.product_item .comment .comment_link{
+    color: #085C9B;
+}
+
+/*筛选页开始*/
+
+.filterContent .leftArea{
+    width: 188px;
+    float: left;
+    background: #F3F3F3;
+    border: 1px solid #CDCDCD;
+}
+.filterContent .leftArea h3{
+    font: bold 16px "宋体";
+    line-height: 35px;
+    text-align: center;
+    border-bottom:  1px solid #CDCDCD;
+
+}
+
+.filterContent .leftArea dl{
+    padding-top: 7px;
+    padding-bottom: 4px;
+    border-bottom: 1px dotted #D7D7D7;
+    margin-top: -1px;
+}
+.filterContent .leftArea dt{
+    font: bold 14px "微软雅黑";
+    line-height: 24px;
+    text-indent: 9px;
+}
+
+.filterContent .leftArea a{
+    display: block;
+    text-indent: 19px;
+    font: 12px "宋体";
+    color: #555555;
+    line-height: 22px;
+}
+
+
+.filterContent .rightArea{
+    width: 797px;
+    float: right;
+    background: #F3F3F3;
+}
+
+.filterContent .rightArea dl{
+    border-bottom: 1px solid #D9D9D9;
+    
+}
+
+.filterContent .rightArea dt{
+    float: left;
+    width: 74px;
+    padding-top: 7px;
+    margin-right: 41px;
+    text-align: right;
+    color: #999999;
+}
+.filterContent .rightArea dd{
+    float: left;
+    /*@ 必须设定宽度 否则元素float会从前面元素没有占据的高度开始*/
+    width: 498px;
+}
+
+.filterContent .rightArea dd a{
+    float: left;
+    width: 24.9%;
+    line-height: 24px;
+    font-size: 12px;
+    color: #1D7AD9;
+
+}
+
+.btnUnlimited{
+    float: left;
+    padding-top: 7px;
+    padding-right: 29px;
+}
+.filterContent .btnUnlimited a{
+    background: #1D7AD9;
+    padding: 2px;
+    color: #fff;;
+    
+}
+
+.btnMore{
+    float: left;
+    margin-top: 10px;
+    padding-right: 10px;
+    background: url(../images/icon/sj_grey.gif) right center no-repeat;
+}
+
+.btnMore a{
+    color: #000;
 }
